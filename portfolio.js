@@ -337,3 +337,86 @@
             });
         }
 
+        // Creative Text Animation
+        function initCreativeTextAnimation() {
+            const textWords = document.querySelectorAll('.text-word');
+            const mediaWords = document.querySelectorAll('.media-word');
+            
+            // Set CSS custom properties for staggered animations
+            textWords.forEach((word, index) => {
+                word.style.setProperty('--word-index', index);
+            });
+            
+            mediaWords.forEach((word, index) => {
+                word.style.setProperty('--word-index', index);
+            });
+            
+            // Intersection Observer for triggering animations when section is visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        
+                        // Restart animations
+                        const words = entry.target.querySelectorAll('.text-word, .media-word');
+                        words.forEach((word, index) => {
+                            word.style.animation = 'none';
+                            setTimeout(() => {
+                                if (word.classList.contains('text-word')) {
+                                    word.style.animation = 'slideUpFade 1s ease-out forwards';
+                                } else {
+                                    word.style.animation = 'popIn 0.8s ease-out forwards';
+                                }
+                                word.style.animationDelay = `${index * 0.2 + (word.classList.contains('media-word') ? 0.3 : 0)}s`;
+                            }, 100);
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+            
+            const creativeSection = document.querySelector('.creative-text-section');
+            if (creativeSection) {
+                observer.observe(creativeSection);
+            }
+        }
+
+        // Add hover effects for media words
+        function initMediaWordHoverEffects() {
+            const mediaWords = document.querySelectorAll('.media-word');
+            
+            mediaWords.forEach(word => {
+                word.addEventListener('mouseenter', () => {
+                    const video = word.querySelector('video');
+                    const img = word.querySelector('img');
+                    
+                    if (video) {
+                        video.play();
+                    }
+                    
+                    gsap.to(word, {
+                        scale: 1.1,
+                        rotation: gsap.utils.random(-5, 5),
+                        duration: 0.3,
+                        ease: "back.out(1.7)"
+                    });
+                });
+                
+                word.addEventListener('mouseleave', () => {
+                    gsap.to(word, {
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.3,
+                        ease: "back.out(1.7)"
+                    });
+                });
+            });
+        }
+
+        // Initialize creative text animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initCreativeTextAnimation();
+            initMediaWordHoverEffects();
+        });
+
