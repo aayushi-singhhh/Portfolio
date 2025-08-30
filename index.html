@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayushi Singh - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <header id="header">
+        <nav>
+            <a href="#hero" class="logo"><Aayushi Singh></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#section">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-upper-layer"></div>
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Aayushi</span></h1>
+            <div class="typing-container">
+                <span>I'm a </span> <span class="typing-text" id="typing-text">  </span>
+            </div>
+            <p>Passionate Data Analyst and Web Developer crafting digital experiences with the precision of Netflix's user interface and the storytelling power of data visualization.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aayushi-singhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/aayushi-singhhh" target="_blank"><i class="fab fa-github"></i></a>
+               <!--<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>-->
+                <!--<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>-->
+            </div>
+            
+            <a href="#contact" class="cta-button">Let's Connect</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.ibb.co/R49xRWcx/myphoto.png" alt="Aayushi Singh">
+        </div>
+    </section>
+
+    <!-- MacBook Showcase Section -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="blur-text">
+                    I don't just build websites. I build experiences front to back, 
+                    Well ain't this site a living proof.
+                </span>
+            </h2>
+            
+            <div class="macbook-container">
+                <div class="macbook-wrapper">
+                    <!-- MacBook Screen -->
+                    <div class="macbook-screen">
+                        <div class="macbook-bezel">
+                            <div class="macbook-camera"></div>
+                        </div>
+                        
+                        <div class="screen-content">
+                            <!-- Browser Window -->
+                            <div class="browser-window">
+                                <div class="browser-header">
+                                    <div class="browser-controls">
+                                        <div class="control-btn close"></div>
+                                        <div class="control-btn minimize"></div>
+                                        <div class="control-btn maximize"></div>
+                                    </div>
+                                    <div class="address-bar">
+                                        <span>🔒 aayushisingh.dev/showcase</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slideshow Content -->
+                                <div class="slideshow-container">
+                                    <div class="slide active">
+                                        <div class="slide-content">
+                                            <img src="https://i.ibb.co/R49xRWcx/myphoto.png" alt="Profile" class="slide-image">
+                                            <div class="slide-text">
+                                                <h3>Data Analyst & Developer</h3>
+                                                <p>Transforming data into insights and ideas into reality</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slide">
+                                        <div class="slide-content">
+                                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="Analytics" class="slide-image">
+                                            <div class="slide-text">
+                                                <h3>Advanced Analytics</h3>
+                                                <p>Building intelligent dashboards and data visualizations</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slide">
+                                        <div class="slide-content">
+                                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800" alt="Development" class="slide-image">
+                                            <div class="slide-text">
+                                                <h3>Full-Stack Development</h3>
+                                                <p>Creating responsive web applications with modern technologies</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="slide">
+                                        <div class="slide-content">
+                                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI" class="slide-image">
+                                            <div class="slide-text">
+                                                <h3>AI Integration</h3>
+                                                <p>Leveraging machine learning for innovative solutions</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Navigation Dots -->
+                                    <div class="slideshow-nav">
+                                        <span class="nav-dot active" data-slide="0"></span>
+                                        <span class="nav-dot" data-slide="1"></span>
+                                        <span class="nav-dot" data-slide="2"></span>
+                                        <span class="nav-dot" data-slide="3"></span>
+                                    </div>
+                                    
+                                    <!-- Arrow Navigation -->
+                                    <button class="slide-arrow prev" onclick="changeSlide(-1)">❮</button>
+                                    <button class="slide-arrow next" onclick="changeSlide(1)">❯</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content that emerges from screen on scroll -->
+                        <div class="emerging-content">
+                            <div class="feature-card" data-delay="0">
+                                <div class="feature-icon">🎨</div>
+                                <h4>Creative Design</h4>
+                                <p>Modern, user-focused interfaces that captivate and engage</p>
+                            </div>
+                            
+                            <div class="feature-card" data-delay="200">
+                                <div class="feature-icon">⚡</div>
+                                <h4>Performance</h4>
+                                <p>Lightning-fast applications optimized for the best user experience</p>
+                            </div>
+                            
+                            <div class="feature-card" data-delay="400">
+                                <div class="feature-icon">📊</div>
+                                <h4>Data-Driven</h4>
+                                <p>Insights backed by thorough analysis and meaningful visualizations</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- MacBook Base -->
+                    <div class="macbook-base">
+                        <div class="base-top">
+                            <div class="base-pattern"></div>
+                        </div>
+                        
+                        <!-- Keyboard -->
+                        <div class="keyboard">
+                            <div class="keyboard-inner">
+                                <!-- Function Keys Row -->
+                                <div class="key-row">
+                                    <div class="key key-esc">esc</div>
+                                    <div class="key key-fn"><i class="fas fa-sun"></i><span>F1</span></div>
+                                    <div class="key key-fn"><i class="fas fa-sun"></i><span>F2</span></div>
+                                    <div class="key key-fn"><i class="fas fa-th"></i><span>F3</span></div>
+                                    <div class="key key-fn"><i class="fas fa-search"></i><span>F4</span></div>
+                                    <div class="key key-fn"><i class="fas fa-microphone"></i><span>F5</span></div>
+                                    <div class="key key-fn"><i class="fas fa-moon"></i><span>F6</span></div>
+                                    <div class="key key-fn"><i class="fas fa-step-backward"></i><span>F7</span></div>
+                                    <div class="key key-fn"><i class="fas fa-play"></i><span>F8</span></div>
+                                    <div class="key key-fn"><i class="fas fa-step-forward"></i><span>F9</span></div>
+                                    <div class="key key-fn"><i class="fas fa-volume-mute"></i><span>F10</span></div>
+                                    <div class="key key-fn"><i class="fas fa-volume-down"></i><span>F11</span></div>
+                                    <div class="key key-fn"><i class="fas fa-volume-up"></i><span>F12</span></div>
+                                    <div class="key key-power"></div>
+                                </div>
+                                
+                                <!-- Number Row -->
+                                <div class="key-row">
+                                    <div class="key"><span class="key-top">~</span><span class="key-bottom">`</span></div>
+                                    <div class="key"><span class="key-top">!</span><span class="key-bottom">1</span></div>
+                                    <div class="key"><span class="key-top">@</span><span class="key-bottom">2</span></div>
+                                    <div class="key"><span class="key-top">#</span><span class="key-bottom">3</span></div>
+                                    <div class="key"><span class="key-top">$</span><span class="key-bottom">4</span></div>
+                                    <div class="key"><span class="key-top">%</span><span class="key-bottom">5</span></div>
+                                    <div class="key"><span class="key-top">^</span><span class="key-bottom">6</span></div>
+                                    <div class="key"><span class="key-top">&</span><span class="key-bottom">7</span></div>
+                                    <div class="key"><span class="key-top">*</span><span class="key-bottom">8</span></div>
+                                    <div class="key"><span class="key-top">(</span><span class="key-bottom">9</span></div>
+                                    <div class="key"><span class="key-top">)</span><span class="key-bottom">0</span></div>
+                                    <div class="key"><span class="key-top">_</span><span class="key-bottom">-</span></div>
+                                    <div class="key"><span class="key-top">+</span><span class="key-bottom">=</span></div>
+                                    <div class="key key-wide">delete</div>
+                                </div>
+                                
+                                <!-- Top Letter Row -->
+                                <div class="key-row">
+                                    <div class="key key-wide">tab</div>
+                                    <div class="key">Q</div>
+                                    <div class="key">W</div>
+                                    <div class="key">E</div>
+                                    <div class="key">R</div>
+                                    <div class="key">T</div>
+                                    <div class="key">Y</div>
+                                    <div class="key">U</div>
+                                    <div class="key">I</div>
+                                    <div class="key">O</div>
+                                    <div class="key">P</div>
+                                    <div class="key"><span class="key-top">{</span><span class="key-bottom">[</span></div>
+                                    <div class="key"><span class="key-top">}</span><span class="key-bottom">]</span></div>
+                                    <div class="key"><span class="key-top">|</span><span class="key-bottom">\</span></div>
+                                </div>
+                                
+                                <!-- Home Row -->
+                                <div class="key-row">
+                                    <div class="key key-caps">caps lock</div>
+                                    <div class="key">A</div>
+                                    <div class="key">S</div>
+                                    <div class="key">D</div>
+                                    <div class="key">F</div>
+                                    <div class="key">G</div>
+                                    <div class="key">H</div>
+                                    <div class="key">J</div>
+                                    <div class="key">K</div>
+                                    <div class="key">L</div>
+                                    <div class="key"><span class="key-top">:</span><span class="key-bottom">;</span></div>
+                                    <div class="key"><span class="key-top">"</span><span class="key-bottom">'</span></div>
+                                    <div class="key key-enter">return</div>
+                                </div>
+                                
+                                <!-- Bottom Letter Row -->
+                                <div class="key-row">
+                                    <div class="key key-shift">shift</div>
+                                    <div class="key">Z</div>
+                                    <div class="key">X</div>
+                                    <div class="key">C</div>
+                                    <div class="key">V</div>
+                                    <div class="key">B</div>
+                                    <div class="key">N</div>
+                                    <div class="key">M</div>
+                                    <div class="key"><span class="key-top"><</span><span class="key-bottom">,</span></div>
+                                    <div class="key"><span class="key-top">></span><span class="key-bottom">.</span></div>
+                                    <div class="key"><span class="key-top">?</span><span class="key-bottom">/</span></div>
+                                    <div class="key key-shift">shift</div>
+                                </div>
+                                
+                                <!-- Bottom Row -->
+                                <div class="key-row">
+                                    <div class="key key-fn-small">fn</div>
+                                    <div class="key key-ctrl">control</div>
+                                    <div class="key key-option">option</div>
+                                    <div class="key key-cmd">⌘</div>
+                                    <div class="key key-space"></div>
+                                    <div class="key key-cmd">⌘</div>
+                                    <div class="key key-option">option</div>
+                                    <div class="arrow-keys">
+                                        <div class="arrow-key arrow-up">↑</div>
+                                        <div class="arrow-row">
+                                            <div class="arrow-key arrow-left">←</div>
+                                            <div class="arrow-key arrow-down">↓</div>
+                                            <div class="arrow-key arrow-right">→</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Trackpad -->
+                        <div class="trackpad"></div>
+                        <div class="base-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2> </div>
+        <div class="section">
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML & CSS</div>
+                            <div class="skill-level">Expert</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript/TypeScript</div>
+                            <div class="skill-level">Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">React</div>
+                            <div class="skill-level">Beginner</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Data Science</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">R</div>
+                            <div class="skill-level">Beginner</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">SQL</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Power BI</div>
+                            <div class="skill-level">Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Tableau</div>
+                            <div class="skill-level">Beginner</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Excel </div>
+                            <div class="skill-level">Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Exploratory Data Analysis</div>
+                            <div class="skill-level">Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Git & Github</div>
+                            
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">VS Code</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Figma</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Jupyter</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <section id="skills">
+        <div class="container">
+            
+            <div class="skills-slider">
+                <div class="slider">
+                    <ul>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png" alt="Python"><span>Python</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png" alt="R"><span>R</span></li>
+                        <li><img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg" alt="SQL"><span>SQL</span></li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++"><span>C++</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas"><span>Pandas</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy"><span>NumPy</span></li>
+                        <li><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/256_Php_logo-512.png" alt="PHP"><span>PHP</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib"><span>Matplotlib</span></li>
+                        <li><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn"><span>Seaborn</span></li>
+                        <li><img src="https://raw.githubusercontent.com/rlew631/rlew631/5fcb1cee69c8034bfa2b98aad94b584fcff8d84f/streamlit_red.svg" alt="Streamlit"><span>Streamlit</span></li>
+                        <li><img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg" alt="SQL"><span>SQL</span></li>
+                        <li><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/256_Php_logo-512.png" alt="php"><span>PHP</span></li>
+                    </ul>
+                </div>
+                
+                <div class="slider slider-reverse">
+                    <ul>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML"><span>HTML</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS"><span>CSS</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"><span>JavaScript</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"><span>GitHub</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"><span>Power BI</span></li>
+                        <li><img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau"><span>Tableau</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma"><span>Figma</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter"><span>Jupyter</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS"><span>CSS</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"><span>JavaScript</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"><span>Power BI</span></li>
+                        <li><img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau"><span>Tableau</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma"><span>Figma</span></li>
+                    </ul>
+                </div>
+                <div class="slider">
+                    <ul>
+                        <li><img src="https://cdn.prod.website-files.com/6421c69c26daff7aacff565e/661e8c8219324d8dbb851e45_Problem-Solving%20Skills%20Training.webp" alt="Problem Solver"><span>Problem Solver</span></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaz8-bSU8Nkn2mZM5wKA1mE-3dH6O6naqddg&s" alt="Stats"><span>Statistics</span></li>
+                        <li><img src="https://www.eschoolnews.com/files/2017/06/criticalthinking2-600x360.jpg" alt="Critical Thinking"><span>Critical Thinking</span></li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/4395/4395354.png" alt="Public Speaking"><span>Public Speaking</span></li>
+                        <li><img src="https://cdn.vectorstock.com/i/1000v/09/10/team-player-rgb-color-icon-vector-36100910.jpg" alt="Team Player"><span>Team Player</span></li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/10108/10108220.png" alt="Adaptability"><span>Adaptability</span></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-xghTCH0oaPGl3CsLlgo6Hk8DEdLeRxc1g&s" alt="Time Management"><span>Time Management</span></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY906nnWVGkpAjf1YPaToKYFZajQWPAYgvwA&s" alt="Strategic Thinking"><span>Strategic Thinking</span></li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5l4ct9w2wUcIg5_I3luRnjq0_nY1wJNnKA&s" alt="Event Management"><span>Event Management</span></li>
+                        <li><img src="https://cdn-icons-png.freepik.com/512/12708/12708505.png" alt="Conflict Resolution"><span>Conflict Resolution</span></li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/11725/11725822.png" alt="Aptitude"><span>Aptitude </span></li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/9192/9192463.png" alt="Logical Reasoning"><span>Logical Reasoning</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Technology - Information Technology</h3>
+                        <p class="institution">Indira Gandhi Delhi Technical University for Women</p>
+                        <p class="duration">2024 - 2028</p>
+                        <p class="description"> Maintaining excellent academic performance while building practical skills in modern technologies.
+                            Actively involved in university projects, hackathons, and tech clubs to enhance learning and collaboration.
+                            <br> CGPA: 9.35 </p>
+                        
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Higher Secondary Education</h3>
+                        <p class="institution">Delhi Public School Ghaziabad, Meerut Road</p>
+                        <p class="duration">2021 - 2023</p>
+                        <p class="description">Completed 12th grade with Science stream, laying strong foundation in mathematics and computer science. <br> Percentage: 93%</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Secondary Education</h3>
+                        <p class="institution">Delhi Public School Ghaziabad, Meerut Road</p>
+                        <p class="duration">2019 - 2021</p>
+                        <p class="description">Completed 10th grade with a holistic academic focus, nurturing core values like leadership, discipline, and analytical thinking early on. <br> Percentage: 96.4%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🤖 Vistora AI</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered Brand Identity Generator</h3>
+                        <p class="project-description">An intelligent brand identity generator that creates cohesive visual identities using machine learning algorithms. Features real-time brand name and logo generation, color palette suggestions, and brand consistency analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">DALL·E</span>
+                            <span class="tech-tag">Color Thief</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="https://github.com/aayushi-singhhh/Vistora.git" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"> 📈 Stock Analysis</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dashboard Building</h3>
+                        <p class="project-description">A comprehensive dashboard for visualizing historical stock revenue data, featuring interactive charts, data filtering, and real-time updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">BeautifulSoup</span>
+                            <span class="tech-tag">yFinance</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="https://github.com/aayushi-singhhh/Historical-Stock-Revenue-Data-Analysis.git" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📊 Statistics Project</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Statistics Dashboard</h3>
+                        <p class="project-description">Analyzed Boston housing data from the U.S. Census Service to identify key factors influencing property prices. Delivered insights to support strategic decisions in urban planning, real estate investments, and housing policy for higher management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Scipy</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="https://github.com/aayushi-singhhh/Statistics-project-with-python-for-data-science.git" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"> My Portfolio</div>
+                    <div class="project-content">
+                        <h3 class="project-title">My Portfolio</h3>
+                        <p class="project-description">A showcase of my work, skills, and projects in data analysis and web development. This portfolio demonstrates my ability to create visually appealing and user-friendly web applications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GitHub</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.linkedin.com/posts/aayushi-singhhh_netflixdev-developerportfolio-frontenddev-activity-7349638638369980416-djqZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFZ0_AsBh1BTkM8MAdM0sNZgTxmCk02SkL0" class="project-link">Live Demo</a>
+                             <a href="https://github.com/aayushi-singhhh/Portfolio.git" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://aayushis.vercel.app/" target="_blank" class="project-link">Website</a
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section">
+    <div class="section">
+        <h2>Courses & Certifications</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">🎓</div>
+                    <div class="course-title">Data Science Fundamentals with Python and SQL</div>
+                </div>
+                <div class="course-provider">IBM</div>
+                <div class="course-description">
+                    Comprehensive certification covering data analysis, visualization, and databases using Python and SQL.
+                    <a href ="https://www.coursera.org/account/accomplishments/specialization/certificate/A6AD4LO09T82" style="color: rgb(197, 24, 24);">View Certificate</a>
+                </div>
+                <div class="course-date">Completed: June 2025</div>
+            </div>
+
+        </div>
+    </div></section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Create Something Amazing</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Collaborate?</h3>
+                    <p>I'm always excited to work on innovative projects and help bring creative visions to life. Whether you have a specific idea in mind or need guidance on your next digital venture, let's connect and explore the possibilities together!</p>
+                    <div style="margin-top: 2rem;">
+                        <p style="margin-bottom: 1rem;">📧 aayushisingh239@gmail.com</p>
+                        <p style="margin-bottom: 1rem;">📱 +91 63951 04027</p>
+                        <p style="margin-bottom: 1rem;">📍 Delhi, India</p>
+                        <p style="margin-bottom: 1rem;">⏰ Available for freelance projects</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xblkrpoj"
+  method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Project Type</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Web App, Data Analysis, UI/UX Design...">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell me about your project</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Share your vision, goals, timeline, and any specific requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Aayushi Singh. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/aayushi-singhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/aayushi-singhhh" target="_blank"><i class="fab fa-github"></i></a>
+                <!--<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>-->
+                <!--<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>-->
+            </div>
+        </div>
+    </footer>
+    <div id="container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
