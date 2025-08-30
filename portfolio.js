@@ -50,105 +50,6 @@
 
         createParticles();
 
-        // MacBook Showcase Features
-        function initMacBookFeatures() {
-            // Slideshow functionality
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.slide');
-            const navDots = document.querySelectorAll('.nav-dot');
-            const totalSlides = slides.length;
-
-            function showSlide(index) {
-                // Remove active class from all slides and dots
-                slides.forEach(slide => {
-                    slide.classList.remove('active', 'prev');
-                });
-                navDots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
-
-                // Add active class to current slide and dot
-                if (slides[index]) {
-                    slides[index].classList.add('active');
-                    navDots[index].classList.add('active');
-                }
-
-                // Add prev class to previous slide for exit animation
-                const prevIndex = currentSlide;
-                if (slides[prevIndex] && prevIndex !== index) {
-                    slides[prevIndex].classList.add('prev');
-                }
-
-                currentSlide = index;
-            }
-
-            // Auto slideshow
-            function nextSlide() {
-                const next = (currentSlide + 1) % totalSlides;
-                showSlide(next);
-            }
-
-            // Change slide function for arrows
-            window.changeSlide = function(direction) {
-                let newIndex;
-                if (direction === 1) {
-                    newIndex = (currentSlide + 1) % totalSlides;
-                } else {
-                    newIndex = (currentSlide - 1 + totalSlides) % totalSlides;
-                }
-                showSlide(newIndex);
-            };
-
-            // Navigation dots click event
-            navDots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    showSlide(index);
-                });
-            });
-
-            // Auto play slideshow
-            setInterval(nextSlide, 5000);
-
-            // Initialize first slide
-            if (slides.length > 0) {
-                showSlide(0);
-            }
-
-            // Scroll-triggered emerging content
-            function handleScroll() {
-                const showcaseSection = document.querySelector('.showcase');
-                const emergingContent = document.querySelector('.emerging-content');
-                const featureCards = document.querySelectorAll('.feature-card');
-
-                if (showcaseSection && emergingContent) {
-                    const rect = showcaseSection.getBoundingClientRect();
-                    const triggerPoint = window.innerHeight * 0.7;
-
-                    // Check if section is in view
-                    if (rect.top < triggerPoint && rect.bottom > 0) {
-                        emergingContent.classList.add('visible');
-                        
-                        // Animate feature cards with delay
-                        featureCards.forEach((card, index) => {
-                            const delay = card.getAttribute('data-delay') || 0;
-                            setTimeout(() => {
-                                card.classList.add('animate');
-                            }, parseInt(delay));
-                        });
-                    }
-                }
-            }
-
-            // Add scroll event listener
-            window.addEventListener('scroll', handleScroll);
-            
-            // Call once to check initial state
-            handleScroll();
-        }
-
-        // Initialize MacBook features when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initMacBookFeatures);
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -418,5 +319,88 @@
         document.addEventListener('DOMContentLoaded', () => {
             initCreativeTextAnimation();
             initMediaWordHoverEffects();
+            initProjectFilters();
+        });
+
+        // Dynamic Projects Filter System
+        function initProjectFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card-3d');
+            
+            // Add click event to filter buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Filter projects with animation
+                    filterProjects(filter, projectCards);
+                });
+            });
+            
+            // Initialize with all projects visible
+            setTimeout(() => {
+                projectCards.forEach(card => {
+                    card.classList.add('visible');
+                });
+            }, 500);
+        }
+
+        function filterProjects(filter, projectCards) {
+            projectCards.forEach((card, index) => {
+                const categories = card.getAttribute('data-category');
+                const shouldShow = filter === 'all' || categories.includes(filter);
+                
+                if (shouldShow) {
+                    // Show card with staggered animation
+                    setTimeout(() => {
+                        card.classList.remove('hidden');
+                        card.classList.add('visible');
+                        card.style.display = 'block';
+                    }, index * 100);
+                } else {
+                    // Hide card
+                    card.classList.add('hidden');
+                    card.classList.remove('visible');
+                    setTimeout(() => {
+                        if (card.classList.contains('hidden')) {
+                            card.style.display = 'none';
+                        }
+                    }, 300);
+                }
+            });
+        }
+
+        // Enhanced hover effects for project cards
+        function initProjectCardEffects() {
+            const projectCards = document.querySelectorAll('.project-card-3d');
+            
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    // Add glow effect
+                    gsap.to(card, {
+                        scale: 1.05,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        }
+
+        // Initialize all project effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // ...existing code...
+            initProjectCardEffects();
         });
 
