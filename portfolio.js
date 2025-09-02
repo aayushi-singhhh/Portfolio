@@ -300,7 +300,7 @@
                         scale: 1.1,
                         rotation: gsap.utils.random(-5, 5),
                         duration: 0.3,
-                        ease: "back.out(1.7)"
+                        ease: "back.out(1.3)"
                     });
                 });
                 
@@ -309,7 +309,7 @@
                         scale: 1,
                         rotation: 0,
                         duration: 0.3,
-                        ease: "back.out(1.7)"
+                        ease: "back.out(1.3)"
                     });
                 });
             });
@@ -319,88 +319,56 @@
         document.addEventListener('DOMContentLoaded', () => {
             initCreativeTextAnimation();
             initMediaWordHoverEffects();
-            initProjectFilters();
         });
+        // Project Filtering Functionality
+function initProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card-modern');
 
-        // Dynamic Projects Filter System
-        function initProjectFilters() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card-3d');
-            
-            // Add click event to filter buttons
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.getAttribute('data-filter');
-                    
-                    // Update active button
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    // Filter projects with animation
-                    filterProjects(filter, projectCards);
-                });
-            });
-            
-            // Initialize with all projects visible
-            setTimeout(() => {
-                projectCards.forEach(card => {
-                    card.classList.add('visible');
-                });
-            }, 500);
-        }
+    // Add visible class to all cards initially
+    projectCards.forEach(card => {
+        card.classList.add('visible');
+    });
 
-        function filterProjects(filter, projectCards) {
-            projectCards.forEach((card, index) => {
-                const categories = card.getAttribute('data-category');
-                const shouldShow = filter === 'all' || categories.includes(filter);
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterValue = button.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Filter projects with animation
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
                 
-                if (shouldShow) {
-                    // Show card with staggered animation
-                    setTimeout(() => {
-                        card.classList.remove('hidden');
-                        card.classList.add('visible');
-                        card.style.display = 'block';
-                    }, index * 100);
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    // Show card
+                    card.classList.remove('hidden');
+                    card.classList.add('visible');
                 } else {
                     // Hide card
-                    card.classList.add('hidden');
                     card.classList.remove('visible');
-                    setTimeout(() => {
-                        if (card.classList.contains('hidden')) {
-                            card.style.display = 'none';
-                        }
-                    }, 300);
+                    card.classList.add('hidden');
                 }
             });
-        }
-
-        // Enhanced hover effects for project cards
-        function initProjectCardEffects() {
-            const projectCards = document.querySelectorAll('.project-card-3d');
             
-            projectCards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    // Add glow effect
-                    gsap.to(card, {
-                        scale: 1.05,
-                        duration: 0.3,
-                        ease: "power2.out"
-                    });
+            // Add a small delay for smooth animation
+            setTimeout(() => {
+                projectCards.forEach(card => {
+                    if (card.classList.contains('hidden')) {
+                        card.style.display = 'none';
+                    } else {
+                        card.style.display = 'block';
+                    }
                 });
-                
-                card.addEventListener('mouseleave', () => {
-                    gsap.to(card, {
-                        scale: 1,
-                        duration: 0.3,
-                        ease: "power2.out"
-                    });
-                });
-            });
-        }
-
-        // Initialize all project effects
-        document.addEventListener('DOMContentLoaded', () => {
-            // ...existing code...
-            initProjectCardEffects();
+            }, 300);
         });
+    });
+}
+
+// Initialize filters when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initProjectFilters();
+});
 

@@ -19,7 +19,6 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#section">Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -41,7 +40,11 @@
                 <!--<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>-->
             </div>
             
-            <a href="#contact" class="cta-button">Let's Connect</a>
+            <div class="hero-buttons">
+                <a href="Aayushi Singh.pdf" class="btn-primary" target="_blank"><i class="fas fa-file-pdf"></i> View Resume</a>
+                <a href="#projects" class="btn-secondary"><i class="fas fa-briefcase"></i> View My Work</a>
+                <a href="#contact" class="btn-outline">Let's Connect</a>
+            </div>
         </div>
         <div class="hero-image">
             <img src="https://i.ibb.co/R49xRWcx/myphoto.png" alt="Aayushi Singh">
@@ -53,42 +56,16 @@
         <div class="container">
             <div class="creative-text-wrapper">
                 <div class="animated-text-line">
-                    <span class="text-word">I'M</span>
-                    <span class="text-word">A</span>
-                    <div class="media-word">
-                        <video autoplay muted loop>
-                            <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=e90dcaba73c19c20728181e8d3ec4e5de64b3f71&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-                        </video>
-                        <span class="word-overlay">CREATIVE</span>
-                    </div>
+                    <span class="text-word">Blending</span>
+                    <span class="text-word">Web,</span>
+                    <span class="text-word">Data</span>
+                    <span class="text-word">and</span>
+                    <span class="text-word">GenAI</span>
                 </div>
-                
                 <div class="animated-text-line">
-                    <span class="text-word">DATA</span>
-                    <div class="media-word">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="Analytics">
-                        <span class="word-overlay">ANALYST</span>
-                    </div>
-                    <span class="text-word">AND</span>
-                </div>
-                
-                <div class="animated-text-line">
-                    <div class="media-word">
-                        <video autoplay muted loop>
-                            <source src="https://player.vimeo.com/external/373465154.sd.mp4?s=e90dcaba73c19c20728181e8d3ec4e5de64b3f71&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-                        </video>
-                        <span class="word-overlay">WEB</span>
-                    </div>
-                    <span class="text-word">DEVELOPER</span>
-                </div>
-                
-                <div class="animated-text-line">
-                    <span class="text-word">CRAFTING</span>
-                    <div class="media-word">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop" alt="Digital">
-                        <span class="word-overlay">DIGITAL</span>
-                    </div>
-                    <span class="text-word">EXPERIENCES</span>
+                    <span class="text-word">into</span>
+                    <span class="text-word">Intelligent</span>
+                    <span class="text-word">Experiences.</span>
                 </div>
             </div>
             
@@ -98,9 +75,146 @@
         </div>
     </section>
 
+       <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Explore my latest work in AI, data analysis, and web development</p>
+            
+            <!-- Project Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Show All
+                </button>
+                <button class="filter-btn" data-filter="data-analytics">
+                    <i class="fas fa-chart-bar"></i> Data Analytics
+                </button>
+                <button class="filter-btn" data-filter="data-science">
+                    <i class="fas fa-chart-line"></i> Data Science
+                </button>
+                <button class="filter-btn" data-filter="web-dev">
+                    <i class="fas fa-code"></i> Web Dev
+                </button>
+                <button class="filter-btn" data-filter="gen-ai">
+                    <i class="fas fa-robot"></i> Gen AI
+                </button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card-modern" data-category="gen-ai">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-category">AI & Machine Learning</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Vistora AI</h3>
+                        <p class="project-subtitle">AI-Powered Brand Identity Generator</p>
+                        <p class="project-description">An intelligent brand identity generator that creates cohesive visual identities using machine learning algorithms. Features real-time brand name and logo generation, color palette suggestions, and brand consistency analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">DALL·E</span>
+                            <span class="tech-tag">Color Thief</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/aayushi-singhhh/Vistora.git" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-modern" data-category="data-science">
+                    <div class="project-header">
+                        <div class="project-icon">📈</div>
+                        <div class="project-category">Data Science</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Stock Analysis Dashboard</h3>
+                        <p class="project-subtitle">Interactive Financial Data Visualization</p>
+                        <p class="project-description">A comprehensive dashboard for visualizing historical stock revenue data, featuring interactive charts, data filtering, and real-time updates for informed investment decisions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">BeautifulSoup</span>
+                            <span class="tech-tag">yFinance</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/aayushi-singhhh/Historical-Stock-Revenue-Data-Analysis.git" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-modern" data-category="data-analytics">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div class="project-category">Data Analytics</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Statistics Dashboard</h3>
+                        <p class="project-subtitle">Boston Housing Data Analysis</p>
+                        <p class="project-description">Analyzed Boston housing data from the U.S. Census Service to identify key factors influencing property prices. Delivered insights to support strategic decisions in urban planning and real estate investments.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Scipy</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/aayushi-singhhh/Statistics-project.git" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-modern" data-category="web-dev">
+                    <div class="project-header">
+                        <div class="project-icon">💻</div>
+                        <div class="project-category">Web Development</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-subtitle">Personal Brand & Showcase</p>
+                        <p class="project-description">A showcase of my work, skills, and projects in data analysis and web development. This portfolio demonstrates my ability to create visually appealing and user-friendly web applications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://aayushis.vercel.app/" target="_blank" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Site
+                            </a>
+                            <a href="https://github.com/aayushi-singhhh/Portfolio.git" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2> </div>
+            <h2 class="section-title">Technical Skills</h2>
+        </div>
         <div class="section">
             <div class="skills-container">
                 <div class="skills-category">
@@ -266,231 +380,69 @@
 
     <section id="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Technology - Information Technology</h3>
-                        <p class="institution">Indira Gandhi Delhi Technical University for Women</p>
-                        <p class="duration">2024 - 2028</p>
-                        <p class="description"> Maintaining excellent academic performance while building practical skills in modern technologies.
-                            Actively involved in university projects, hackathons, and tech clubs to enhance learning and collaboration.
-                            <br> CGPA: 9.35 </p>
-                        
-                        </p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Higher Secondary Education</h3>
-                        <p class="institution">Delhi Public School Ghaziabad, Meerut Road</p>
-                        <p class="duration">2021 - 2023</p>
-                        <p class="description">Completed 12th grade with Science stream, laying strong foundation in mathematics and computer science. <br> Percentage: 93%</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Secondary Education</h3>
-                        <p class="institution">Delhi Public School Ghaziabad, Meerut Road</p>
-                        <p class="duration">2019 - 2021</p>
-                        <p class="description">Completed 10th grade with a holistic academic focus, nurturing core values like leadership, discipline, and analytical thinking early on. <br> Percentage: 96.4%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="dynamic-projects">
-        <div class="projects-background">
-            <div class="floating-elements"></div>
-        </div>
-        
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            
-            <!-- Project Filter Navigation -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">View All Projects</button>
-                <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
-                <button class="filter-btn" data-filter="web-development">Web Development</button>
-                <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
-                <button class="filter-btn" data-filter="dashboard">Dashboards</button>
-            </div>
-            
-            <!-- Dynamic Project Cards Container -->
-            <div class="dynamic-projects-container">
-                <!-- AI/ML Projects -->
-                <div class="project-card-3d" data-category="ai-ml" data-delay="0">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                <div class="project-icon">🤖</div>
-                                <h3>Vistora AI</h3>
-                                <p class="project-category">AI & Machine Learning</p>
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-certifications-wrapper">
+                <div class="education-section">
+                    <h3 class="subsection-title">Education</h3>
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bachelor of Technology - Information Technology</h4>
+                                <p class="institution">Indira Gandhi Delhi Technical University for Women</p>
+                                <p class="duration">2024 - 2028</p>
+                                <p class="description">Maintaining excellent academic performance while building practical skills in modern technologies. Actively involved in university projects, hackathons, and tech clubs to enhance learning and collaboration.<br> CGPA: 9.35</p>
                             </div>
                         </div>
-                        <div class="card-back">
-                            <div class="project-details">
-                                <h3>AI-Powered Brand Identity Generator</h3>
-                                <p>Intelligent brand identity generator using machine learning algorithms. Features real-time brand name and logo generation, color palette suggestions, and brand consistency analysis.</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Streamlit</span>
-                                    <span class="tech-tag">OpenAI</span>
-                                    <span class="tech-tag">DALL·E</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="btn-primary">Live Demo</a>
-                                    <a href="https://github.com/aayushi-singhhh/Vistora.git" target="_blank" class="btn-secondary">Code</a>
-                                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Higher Secondary Education</h4>
+                                <p class="institution">Delhi Public School Ghaziabad, Meerut Road</p>
+                                <p class="duration">2021 - 2023</p>
+                                <p class="description">Completed 12th grade with Science stream, laying strong foundation in mathematics and computer science.<br> Percentage: 93%</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Secondary Education</h4>
+                                <p class="institution">Delhi Public School Ghaziabad, Meerut Road</p>
+                                <p class="duration">2019 - 2021</p>
+                                <p class="description">Completed 10th grade with a holistic academic focus, nurturing core values like leadership, discipline, and analytical thinking early on.<br> Percentage: 96.4%</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Data Analysis Projects -->
-                <div class="project-card-3d" data-category="data-analysis" data-delay="100">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                                <div class="project-icon">📈</div>
-                                <h3>Stock Analysis</h3>
-                                <p class="project-category">Data Analysis</p>
+                <div class="certifications-section">
+                    <h3 class="subsection-title">Certifications</h3>
+                    <div class="certifications-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Data Science Fundamentals with Python and SQL</h4>
+                                <p class="institution">IBM - Coursera</p>
+                                <p class="duration">June 2025</p>
+                                <p class="description">Comprehensive certification covering data analysis, visualization, and databases using Python and SQL. <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/A6AD4LO09T82" target="_blank" style="color: #e50914;">View Certificate</a></p>
                             </div>
                         </div>
-                        <div class="card-back">
-                            <div class="project-details">
-                                <h3>Historical Stock Revenue Dashboard</h3>
-                                <p>Comprehensive dashboard for visualizing historical stock revenue data with interactive charts, data filtering, and real-time updates.</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Pandas</span>
-                                    <span class="tech-tag">Matplotlib</span>
-                                    <span class="tech-tag">yFinance</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="btn-primary">Live Demo</a>
-                                    <a href="https://github.com/aayushi-singhhh/Historical-Stock-Revenue-Data-Analysis.git" target="_blank" class="btn-secondary">Code</a>
-                                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Google Analytics Certified</h4>
+                                <p class="institution">Google</p>
+                                <p class="duration">May 2025</p>
+                                <p class="description">Certified in Google Analytics fundamentals, advanced analytics, and data interpretation for web analytics and business intelligence.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Dashboard Projects -->
-                <div class="project-card-3d" data-category="dashboard data-analysis" data-delay="200">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                                <div class="project-icon">📊</div>
-                                <h3>Statistics Dashboard</h3>
-                                <p class="project-category">Data Analysis</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="project-details">
-                                <h3>Boston Housing Statistics</h3>
-                                <p>Analyzed Boston housing data from U.S. Census Service to identify key factors influencing property prices for strategic decision-making.</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">API</span>
-                                    <span class="tech-tag">Matplotlib</span>
-                                    <span class="tech-tag">Scipy</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="btn-primary">Live Demo</a>
-                                    <a href="https://github.com/aayushi-singhhh/Statistics-project-with-python-for-data-science.git" target="_blank" class="btn-secondary">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Web Development Projects -->
-                <div class="project-card-3d" data-category="web-development" data-delay="300">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                                <div class="project-icon">💻</div>
-                                <h3>Portfolio Website</h3>
-                                <p class="project-category">Web Development</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="project-details">
-                                <h3>Interactive Portfolio</h3>
-                                <p>Modern, responsive portfolio showcasing data analysis and web development skills with interactive animations and Netflix-inspired design.</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">GSAP</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="https://aayushis.vercel.app/" target="_blank" class="btn-primary">Live Demo</a>
-                                    <a href="https://github.com/aayushi-singhhh/Portfolio.git" target="_blank" class="btn-secondary">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Additional AI Project -->
-                <div class="project-card-3d" data-category="ai-ml" data-delay="400">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image-bg" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                                <div class="project-icon">🧠</div>
-                                <h3>ML Analytics</h3>
-                                <p class="project-category">Machine Learning</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="project-details">
-                                <h3>Predictive Analytics Engine</h3>
-                                <p>Advanced machine learning models for predictive analytics with data visualization and real-time insights generation.</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Scikit-learn</span>
-                                    <span class="tech-tag">TensorFlow</span>
-                                    <span class="tech-tag">Plotly</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="btn-primary">Live Demo</a>
-                                    <a href="#" class="btn-secondary">Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Dashboard Project -->
-                <div class="project-card-3d" data-category="dashboard web-development" data-delay="500">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image-bg" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-                                <div class="project-icon">📋</div>
-                                <h3>Business Intelligence</h3>
-                                <p class="project-category">Dashboard</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="project-details">
-                                <h3>Interactive BI Dashboard</h3>
-                                <p>Comprehensive business intelligence dashboard with real-time data visualization, KPI tracking, and automated reporting.</p>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Power BI</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">SQL</span>
-                                    <span class="tech-tag">Excel</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="btn-primary">Live Demo</a>
-                                    <a href="#" class="btn-secondary">Code</a>
-                                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Python Programming Certificate</h4>
+                                <p class="institution">HackerRank</p>
+                                <p class="duration">April 2025</p>
+                                <p class="description">Advanced Python programming skills including data structures, algorithms, and object-oriented programming concepts.</p>
                             </div>
                         </div>
                     </div>
@@ -499,25 +451,7 @@
         </div>
     </section>
 
-    <section id="section">
-    <div class="section">
-        <h2>Courses & Certifications</h2>
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-icon">🎓</div>
-                    <div class="course-title">Data Science Fundamentals with Python and SQL</div>
-                </div>
-                <div class="course-provider">IBM</div>
-                <div class="course-description">
-                    Comprehensive certification covering data analysis, visualization, and databases using Python and SQL.
-                    <a href ="https://www.coursera.org/account/accomplishments/specialization/certificate/A6AD4LO09T82" style="color: rgb(197, 24, 24);">View Certificate</a>
-                </div>
-                <div class="course-date">Completed: June 2025</div>
-            </div>
-
-        </div>
-    </div></section>
+ 
 
     <section id="contact">
         <div class="container">
