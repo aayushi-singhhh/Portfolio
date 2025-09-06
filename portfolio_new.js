@@ -390,24 +390,13 @@ function initProjectFilters() {
 // Projects table modal functionality
 function initProjectsModal() {
     const showAllProjectsBtn = document.getElementById('show-all-projects-btn');
-    const testModalBtn = document.getElementById('test-modal-btn');
     const projectsTableModal = document.getElementById('projects-table-modal');
     const closeModalBtn = document.getElementById('close-modal-btn');
     const projectRows = document.querySelectorAll('.projects-table .project-row');
     const cursorFollowImage = document.getElementById('cursor-follow-image');
     
-    console.log('Modal elements found:', {
-        showAllProjectsBtn: !!showAllProjectsBtn,
-        testModalBtn: !!testModalBtn,
-        projectsTableModal: !!projectsTableModal,
-        closeModalBtn: !!closeModalBtn,
-        projectRows: projectRows.length,
-        cursorFollowImage: !!cursorFollowImage
-    });
-    
     // Make sure these elements exist before setting up event handlers
-    if (!projectsTableModal || (!showAllProjectsBtn && !testModalBtn)) {
-        console.error('Required modal elements not found!');
+    if (!projectsTableModal || !showAllProjectsBtn) {
         return;
     }
     
@@ -448,21 +437,18 @@ function initProjectsModal() {
         });
     }
     
-    // Shared function to open modal
-    function openModal() {
-        console.log('Modal button clicked!');
-        console.log('Modal element:', projectsTableModal);
+    // Open modal
+    showAllProjectsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         
-        // Show modal relative to projects section
+        // Show modal
         projectsTableModal.style.display = 'block';
-        projectsTableModal.style.visibility = 'visible';
-        projectsTableModal.style.opacity = '1';
-        projectsTableModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
         
-        console.log('Modal should be visible now relative to projects section');
-        
-        // Add active class after a brief delay for animations
+        // Add active class after a brief delay
         setTimeout(() => {
+            projectsTableModal.classList.add('active');
+            
             // Animation for modal entrance
             if (typeof gsap !== 'undefined') {
                 gsap.fromTo('.modal-content', 
@@ -475,36 +461,31 @@ function initProjectsModal() {
                     { y: 30, opacity: 0 },
                     { y: 0, opacity: 1, stagger: 0.05, duration: 0.5, delay: 0.3, ease: 'power3.out' }
                 );
-            } else {
-                // Fallback CSS animation
-                const modalContent = document.querySelector('.modal-content');
-                if (modalContent) {
-                    modalContent.style.transform = 'translateY(0)';
-                    modalContent.style.opacity = '1';
-                }
             }
-        }, 100);
-    }
-
-    // Open modal - Show All Projects button
-    if (showAllProjectsBtn) {
-        showAllProjectsBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
-        });
-    }
-
+        }, 50);
+    });
+    
     // Close modal function
     function closeModal() {
-        console.log('Closing modal...');
-        
-        // Hide modal
-        projectsTableModal.classList.remove('active');
-        projectsTableModal.style.display = 'none';
-        projectsTableModal.style.visibility = 'hidden';
-        projectsTableModal.style.opacity = '0';
-        
-        console.log('Modal closed');
+        // Animate out
+        if (typeof gsap !== 'undefined') {
+            gsap.to('.modal-content', {
+                y: 30,
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.3,
+                ease: 'power2.in',
+                onComplete: () => {
+                    projectsTableModal.classList.remove('active');
+                    projectsTableModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        } else {
+            projectsTableModal.classList.remove('active');
+            projectsTableModal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
     }
     
     // Close modal button
@@ -525,30 +506,4 @@ function initProjectsModal() {
             closeModal();
         }
     });
-    
-    // Test modal button - add this temporarily for debugging
-    const testBtn = document.createElement('button');
-    testBtn.textContent = ' ';
-    testBtn.style.position = 'fixed';
-    testBtn.style.top = '10px';
-    testBtn.style.right = '10px';
-    testBtn.style.zIndex = '99999';
-    testBtn.style.padding = '10px';
-    testBtn.style.backgroundColor = 'black';
-    testBtn.style.color = 'white';
-    testBtn.addEventListener('click', () => {
-        console.log('Test button clicked');
-        const modal = document.getElementById('projects-table-modal');
-        if (modal) {
-            modal.style.display = 'block';
-            modal.style.visibility = 'visible';
-            modal.style.opacity = '1';
-            modal.style.zIndex = '9999';
-            modal.classList.add('active');
-            console.log('Modal should be visible now');
-        } else {
-            console.error('Modal not found!');
-        }
-    });
-    document.querySelector('.show-all-projects-container').appendChild(testBtn);
 }
