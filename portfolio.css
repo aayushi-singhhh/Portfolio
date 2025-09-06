@@ -1502,11 +1502,15 @@
             margin-bottom: 1rem;
         }
 
-        .project-description {
+        .project-card .project-description {
             color: #cccccc;
             line-height: 1.6;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
+            text-align: justify;
+            word-spacing: 0.05em;
+            hyphens: auto;
+            width: 100%;
         }
 
         .project-tech {
@@ -1823,7 +1827,7 @@
         .project-name {
             font-weight: 600;
             font-size: 1.1rem;
-            width: 25%;
+            width: 20%;
             transition: transform 0.3s ease;
         }
         
@@ -1834,20 +1838,26 @@
         .project-type {
             font-size: 0.95rem;
             opacity: 0.8;
-            width: 25%;
+            width: 20%;
         }
         
         .project-tech-list {
             font-size: 0.95rem;
             opacity: 0.8;
-            width: 35%;
+            width: 25%;
         }
         
-        .project-year {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            text-align: right;
-            width: 15%;
+        /* Separate styles for table description cells */
+        .projects-table .project-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            width: 35%;
+            line-height: 1.5;
+            padding-right: 1rem;
+            text-align: justify;
+            word-spacing: normal;
+            hyphens: auto;
+            max-width: 300px;
         }
         
         .project-preview-container {
@@ -1887,9 +1897,25 @@
                 padding: 1rem;
             }
             
-            .projects-table th:nth-child(5), /* Assets column */
-            .projects-table td:nth-child(5) {
+            .projects-table th:nth-child(3), /* Technologies column - hide on mobile */
+            .projects-table td:nth-child(3) {
                 display: none;
+            }
+            
+            .project-name {
+                width: 40%;
+            }
+            
+            .project-type {
+                width: 25%;
+            }
+            
+            .projects-table .project-description {
+                width: 35%;
+                font-size: 0.85rem;
+                line-height: 1.4;
+                text-align: left;
+                max-width: none;
             }
             
             .cursor-follow-image {
@@ -2236,7 +2262,7 @@
                 font-size: 1rem;
             }
 
-            .project-description {
+            .project-card .project-description {
                 font-size: 0.9rem;
             }
 
@@ -2301,7 +2327,7 @@
                 font-size: 0.9rem;
             }
 
-            .project-description {
+            .project-card .project-description {
                 font-size: 0.8rem;
             }
 
