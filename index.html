@@ -74,6 +74,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -84,8 +85,8 @@
                 <button class="filter-btn active" data-filter="all">
                     <i class="fas fa-star"></i> Featured
                 </button>
-                <button class="filter-btn" data-filter="data-analytics">
-                    <i class="fas fa-chart-bar"></i> Data Analytics
+                <button class="filter-btn" data-filter="gen-ai">
+                    <i class="fas fa-robot"></i> Gen AI
                 </button>
                 <button class="filter-btn" data-filter="data-science">
                     <i class="fas fa-chart-line"></i> Data Science
@@ -93,40 +94,14 @@
                 <button class="filter-btn" data-filter="web-dev">
                     <i class="fas fa-code"></i> Web Dev
                 </button>
-                <button class="filter-btn" data-filter="gen-ai">
-                    <i class="fas fa-robot"></i> Gen AI
+                <button class="filter-btn" data-filter="data-analytics">
+                    <i class="fas fa-chart-bar"></i> Data Analytics
                 </button>
             </div>
             
             <div class="projects-grid">
-                <div class="project-card-modern" data-category="gen-ai">
-                    <div class="project-header">
-                        <div class="project-icon">🤖</div>
-                        <div class="project-category">AI & Machine Learning</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Vistora AI</h3>
-                        <p class="project-subtitle">AI-Powered Brand Identity Generator</p>
-                        <p class="project-description">An intelligent brand identity generator that creates cohesive visual identities using machine learning algorithms. Features real-time brand name and logo generation, color palette suggestions, and brand consistency analysis.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">DALL·E</span>
-                            <span class="tech-tag">Color Thief</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link primary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/aayushi-singhhh/Vistora.git" target="_blank" class="project-link secondary">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card-modern" data-category="data-analytics">
+
+                <div class="project-card-modern" data-category="data-analytics" > <!--Analyzing Historical Stock Revenue Data-->
                     <div class="project-header">
                         <div class="project-icon">📊</div>
                         <div class="project-category">Data Analytics</div>
@@ -154,16 +129,42 @@
                     </div>
                 </div>
 
+                <div class="project-card-modern" data-category="gen-ai" data-featured="true"> <!--mycursor-->
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-category">AI Agent</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">My Cursor</h3>
+                        <p class="project-subtitle">AI Agent with Dynamic Tool Creation</p>
+                        <p class="project-description">
+                            Built an intelligent agent capable of dynamically creating and executing tools in real-time.
+                            Features include tool generation (<b>createTool</b>, <b>createFile</b>), shell command execution,
+                            and fetching external data.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Dynamic Tools</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aayushi-singhhh/my-cursor" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-
-                <div class="project-card-modern" data-category="gen-ai">
+                <div class="project-card-modern" data-category="gen-ai" data-featured="true"> <!--saaya-->
                     <div class="project-header">
                         <div class="project-icon">🌟</div>
-                        <div class="project-category">GEN AI</div>
+                        <div class="project-category">AI Agent</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Saaya</h3>
-                        <p class="project-subtitle">AI-Powered Digital Companion</p>
+                        <p class="project-subtitle">AI Digital Companion for elders</p>
                         <p class="project-description">
                             A compassionate AI platform designed for senior citizens, featuring bilingual voice guidance, real-time screen sharing with annotations, and elderly-friendly design.
                         </p>
@@ -182,9 +183,64 @@
                         </div>
                     </div>
                 </div>
+                <div class="project-card-modern" data-category="gen-ai" data-featured="true"> <!--Vistora-->
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-category">AI & Machine Learning</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Vistora AI</h3>
+                        <p class="project-subtitle">AI-Powered Brand Identity Generator</p>
+                        <p class="project-description">An intelligent brand identity generator that creates cohesive visual identities using machine learning algorithms. Features real-time brand name and logo generation, color palette suggestions, and brand consistency analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">DALL·E</span>
+                            <span class="tech-tag">Color Thief</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/aayushi-singhhh/Vistora.git" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card-modern" data-category="web-dev"> <!--zentry-demo-->
+                    <div class="project-header">
+                        <div class="project-icon">💻</div>
+                        <div class="project-category">Interactive UI Demo</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Zentry-Demo Interactive Template</h3>
+                        <p class="project-subtitle">Modern UI Template via Vite + TailwindCSS</p>
+                        <p class="project-description">
+                            A sleek, responsive UI template built with JavaScript, Tailwind CSS, and Vite. Designed as a versatile, deploy-ready starter project<br>
+                            Ideal for rapid prototype development or frontend experimentation. Live demo provided via Vercel.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">UI Template</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aayushi-singhhh/zentry-demo" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://zentry-demo.vercel.app" target="_blank" class="project-link secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-
-                <div class="project-card-modern" data-category="data-science">
+                <div class="project-card-modern" data-category="data-science"> <!--Interactive Financial Data Visualization-->
                     <div class="project-header">
                         <div class="project-icon">📈</div>
                         <div class="project-category">Data Science</div>
@@ -210,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card-modern" data-category="data-analytics">
+                <div class="project-card-modern" data-category="data-analytics"> <!--real estate price prediction-->
                     <div class="project-header">
                         <div class="project-icon">🏠</div>
                         <div class="project-category">Data Analytics</div>
@@ -238,7 +294,7 @@
                 </div>
 
 
-                <div class="project-card-modern" data-category="data-analytics">
+                <div class="project-card-modern" data-category="data-analytics"> <!--Boston Housing Data Analysis-->
                     <div class="project-header">
                         <div class="project-icon">📊</div>
                         <div class="project-category">Data Analytics</div>
@@ -550,17 +606,32 @@
     </section>
 
      <div class="netflix-container">
-        <h2 class="section-title">Trending Now</h2>
-
         <div class="carousel-container" id="carousel">
             <div class="carousel-track">
                 <!-- First set -->
                 <div class="netflix-card wide">
-                    <img src="assets/workshop.jpeg" alt="Content" class="card-image">
+                    <img src="assets/pitch2.jpeg" alt="Content" class="card-image">
                 </div>
-
                 <div class="netflix-card tall">
                     <img src="assets/cards.jpeg" alt="Content" class="card-image">
+                </div>
+                <div class="netflix-card tall">
+                    <img src="assets/offer-letter-techfest.png" alt="Content" class="card-image">
+                </div>
+                <div class="netflix-card tall">
+                    <img src="assets/Techfest-rank.png" alt="Content" class="card-image">
+                </div>
+                <div class="netflix-card tall">
+                    <img src="assets/esummit.jpeg" alt="Content" class="card-image">
+                </div>
+                <div class="netflix-card tall">
+                    <img src="assets/pitch1.jpeg" alt="Content" class="card-image">
+                </div>
+                <div class="netflix-card tall">
+                    <img src="assets/igdtuw.png" alt="Content" class="card-image">
+                </div>
+                <div class="netflix-card tall">
+                    <img src="assets/workshop.jpeg" alt="Content" class="card-image">
                 </div>
 
             </div>

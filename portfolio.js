@@ -345,10 +345,8 @@ function initProjectFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card-modern');
 
-    // Add visible class to all cards initially
-    projectCards.forEach(card => {
-        card.classList.add('visible');
-    });
+    // Initially show only featured projects
+    showFeaturedProjects();
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -359,31 +357,56 @@ function initProjectFilters() {
             button.classList.add('active');
             
             // Filter projects with animation
-            projectCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                
-                if (filterValue === 'all' || cardCategory === filterValue) {
-                    // Show card
-                    card.classList.remove('hidden');
-                    card.classList.add('visible');
-                } else {
-                    // Hide card
-                    card.classList.remove('visible');
-                    card.classList.add('hidden');
-                }
-            });
-            
-            // Add a small delay for smooth animation
-            setTimeout(() => {
-                projectCards.forEach(card => {
-                    if (card.classList.contains('hidden')) {
-                        card.style.display = 'none';
-                    } else {
-                        card.style.display = 'block';
-                    }
-                });
-            }, 300);
+            if (filterValue === 'all') {
+                // Show only featured projects when "Featured" is selected
+                showFeaturedProjects();
+            } else {
+                // Show all projects in the selected category (both featured and non-featured)
+                showProjectsByCategory(filterValue);
+            }
         });
+    });
+}
+
+// Function to show only featured projects
+function showFeaturedProjects() {
+    const projectCards = document.querySelectorAll('.project-card-modern');
+    
+    projectCards.forEach(card => {
+        const isFeatured = card.getAttribute('data-featured') === 'true';
+        
+        if (isFeatured) {
+            // Show featured card
+            card.classList.remove('hidden');
+            card.classList.add('visible');
+            card.style.display = 'block';
+        } else {
+            // Hide non-featured card
+            card.classList.remove('visible');
+            card.classList.add('hidden');
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Function to show projects by category (both featured and non-featured)
+function showProjectsByCategory(category) {
+    const projectCards = document.querySelectorAll('.project-card-modern');
+    
+    projectCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        
+        if (cardCategory === category) {
+            // Show card if it matches the category
+            card.classList.remove('hidden');
+            card.classList.add('visible');
+            card.style.display = 'block';
+        } else {
+            // Hide card if it doesn't match the category
+            card.classList.remove('visible');
+            card.classList.add('hidden');
+            card.style.display = 'none';
+        }
     });
 }
 
@@ -525,30 +548,4 @@ function initProjectsModal() {
             closeModal();
         }
     });
-    
-    // Test modal button - add this temporarily for debugging
-    const testBtn = document.createElement('button');
-    testBtn.textContent = ' ';
-    testBtn.style.position = 'fixed';
-    testBtn.style.top = '10px';
-    testBtn.style.right = '10px';
-    testBtn.style.zIndex = '99999';
-    testBtn.style.padding = '10px';
-    testBtn.style.backgroundColor = 'black';
-    testBtn.style.color = 'white';
-    testBtn.addEventListener('click', () => {
-        console.log('Test button clicked');
-        const modal = document.getElementById('projects-table-modal');
-        if (modal) {
-            modal.style.display = 'block';
-            modal.style.visibility = 'visible';
-            modal.style.opacity = '1';
-            modal.style.zIndex = '9999';
-            modal.classList.add('active');
-            console.log('Modal should be visible now');
-        } else {
-            console.error('Modal not found!');
-        }
-    });
-    document.querySelector('.show-all-projects-container').appendChild(testBtn);
 }
